@@ -1,0 +1,16 @@
+  version: '3'
+
+  services:
+    db:
+      image: mysql/mysql-server:8.0.32
+      restart: always
+      environment:
+        MYSQL_DATABASE: registrosDB
+        MYSQL_USER: cerocodigo
+        MYSQL_PASSWORD: Cer0Cod1go
+
+      ports:
+        - "3307:3306"
+      container_name: registroDB
+      volumes:
+        - ./mysql:/var/lib/mysql

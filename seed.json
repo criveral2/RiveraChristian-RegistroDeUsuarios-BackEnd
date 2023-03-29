@@ -1,0 +1,82 @@
+[
+    {
+        "model": "user.countries",
+        "pk": 1,
+        "fields": {
+            "country_name": "Ecuador",
+            "nationality": "Ecuatoriano/a"
+        }
+    },
+    {
+        "model": "user.countries",
+        "pk": 2,
+        "fields": {
+            "country_name": "España",
+            "nationality": "Español/a"
+        }
+    },
+    {
+        "model": "user.countries",
+        "pk": 3,
+        "fields": {
+            "country_name": "México",
+            "nationality": "Mexicano/a"
+        }
+    },
+    {
+        "model": "user.countries",
+        "pk": 4,
+        "fields": {
+            "country_name": "Colombia",
+            "nationality": "Colombiano/a"
+        }
+    },
+    {
+        "model": "user.countries",
+        "pk": 5,
+        "fields": {
+            "country_name": "Estados Unidos",
+            "nationality": "Estadounidense"
+        }
+    },
+    {
+        "model": "user.countries",
+        "pk": 6,
+        "fields": {
+            "country_name": "Argentina",
+            "nationality": "Argentino/a"
+        }
+    },
+    {
+        "model": "user.countries",
+        "pk": 7,
+        "fields": {
+            "country_name": "Brasil",
+            "nationality": "Brasileño/a"
+        }
+    },
+    {
+        "model": "user.countries",
+        "pk": 8,
+        "fields": {
+            "country_name": "Canadá",
+            "nationality": "Canadiense"
+        }
+    },
+    {
+        "model": "user.countries",
+        "pk": 9,
+        "fields": {
+            "country_name": "Chile",
+            "nationality": "Chileno/a"
+        }
+    },
+    {
+        "model": "user.countries",
+        "pk": 10,
+        "fields": {
+            "country_name": "Costa Rica",
+            "nationality": "Costarricense"
+        }
+    }
+]

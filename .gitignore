@@ -1,0 +1,10 @@
+.idea/
+env/
+
+**/migrations/**
+!**/migrations
+!**/migrations/__init__.py
+
+mysql/
+
+__pycache__/
