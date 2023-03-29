@@ -10,7 +10,7 @@
         MYSQL_PASSWORD: Cer0Cod1go
 
       ports:
-        - "3307:3306"
+        - "3306:3306"
       container_name: registroDB
       volumes:
         - ./mysql:/var/lib/mysql
