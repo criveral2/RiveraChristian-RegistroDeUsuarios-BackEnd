@@ -19,9 +19,9 @@ de consultar a la base de datos.
 
 ## :hammer:Funcionalidades del proyecto
 - `Funcionalidad 1`: Funcionalidad para listar los usuarios.
-- `Funcionalidad 2`: Funcionalidad para actualizar los usuarios
-- `Funcionalidad 3`: Funcionalidad para crear un nuevo usuario
-- `Funcionalidad 4`: Funcionalidad para escoger nacionalidad
+- `Funcionalidad 2`: Funcionalidad para actualizar los usuarios.
+- `Funcionalidad 3`: Funcionalidad para crear un nuevo usuario.
+- `Funcionalidad 4`: Funcionalidad para escoger nacionalidad.
 
 
 ## ✔️:Tecnologias utilizadas
@@ -107,93 +107,54 @@ python manage.py loaddata seed.json
 
 Y finalmente para ejecutar la aplicacion 
 ```
-python manage.py loaddata seed.json
+py manage.py runserver
 ```
 # Servicios api rest
-- `Funcionalidad 1`: Funcionalidad para buscar y obtener un listado de clientes.
+- `Funcionalidad 1`: Funcionalidad para listar los usuarios.
   </br>
   
    URL:
    ```
-   http://localhost:8080/customer/find?identification=0107145393
+   http://localhost:8000/api/users/
    ```
-   o:
-   ```
-   http://localhost:8080/customer/find?identification=CHRISTIAN GEOVANNY RIVERA LOJA
-   ```
-- `Funcionalidad 2`: Funcionalidad para crear un nuevo cliente con la dirección matriz
+  
+- `Funcionalidad 2`: Funcionalidad para actualizar los usuarios.
   </br>
   
    URL:
    ```
-   http://localhost:8080/customer
+   http://localhost:8000/api/users/0163952897
    ```
    JSON:
    ```
    {
-    "id": null,
-    "identificationType": "CEDULA",
-    "identificationNumber": "0107145393",
-    "completeNames": "CHRISTIAN GEOVANNY RIVERA LOJA",
-    "email": "geovanny@gmail.com",
-    "phone": "0991748285",
-    "branches": [
-      {
-        "id": null,
-        "branchType": "MATRIZ",
-        "province": "AZUAY",
-        "city": "CUENCA",
-        "address": "calle mariscal lamar"
-      }
-    ]
-  }
+    "id": "0163952897",
+    "name": "Pablo Malla",
+    "birth_date": "1997-03-28",
+    "country": 2
+   }
    ```
-- `Funcionalidad 3`: Funcionalidad para editar los datos del cliente
+- `Funcionalidad 3`: Funcionalidad para crear un nuevo usuario.
   </br>
   
    URL:
    ```
-   http://localhost:8080/customer/1
+   http://localhost:8000/api/users/nuevo
    ```
    JSON:
    ```
   {
-    "id": null,
-    "identificationType": "CEDULA",
-    "identificationNumber": "0107145393",
-    "completeNames": "CHRISTIAN ANDRES RIVERA LOJA",
-    "email": "andrest56@gmail.com",
-    "phone": "0998597452"
+    "id": "0163952897",
+    "name": "Pablo Malla",
+    "birth_date": "1997-11-05",
+    "country": 1
   }
    ```
-- `Funcionalidad 4`: Funcionalidad para eliminar un cliente
+- `Funcionalidad 4`: Funcionalidad para escoger nacionalidad.
   </br>
   
    URL:
    ```
-   http://localhost:8080/customer/1
+   http://localhost:8000/api/users/countries/
    ```
-- `Funcionalidad 5`: Funcionalidad para registrar una nueva dirección por cliente
-  </br>
-  
-   URL:
-   ```
-   http://localhost:8080/customer/branch/1
-   ```
-   JSON:
-   ```
-  {
-  "id": null,
-  "branchType": "SUCURSAL",
-  "province": "AZUAY",
-  "city": "CUENCA",
-  "address": "Av. loja"
-  }
-   ```
-- `Funcionalidad 6`: Funcionalidad para listar las direcciones adicionales del cliente
-  </br>
-  
-   URL:
-   ```
-   http://localhost:8080/customer/branch/1
-   ```
+
