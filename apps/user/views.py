@@ -22,14 +22,14 @@ class CreateUserListCreateAPIView(generics.ListCreateAPIView):
 
     def create(self, request):
         if not self.mayor_edad(request.data["birth_date"]):
-            return Response({"status": 404, "message": "No puede ser menor de edad"}, status=status.HTTP_404_NOT_FOUND)
+            return Response({"status": 404,"message": {"id": ["No puede ser menor de edad"]}}, status=status.HTTP_404_NOT_FOUND)
 
         user_serializer = self.user_create_serializer_class(data=request.data)
         if user_serializer.is_valid():
             user_serializer.save()
             return Response({"status": 200, "message": "success create", "data": user_serializer.data},
                             status=status.HTTP_200_OK)
-        return Response({"status": 400, "message": "error", "error": user_serializer.errors},
+        return Response({"status": 400, "message": user_serializer.errors},
                         status=status.HTTP_400_BAD_REQUEST)
 
     def mayor_edad(self, fecha):
@@ -45,7 +45,7 @@ class UserApiView(APIView):
 
     def put(self, request, pk=None):
         if not CreateUserListCreateAPIView.mayor_edad(self, request.data["birth_date"]):
-            return Response({"status": 404, "message": "No puede ser menor de edad"}, status=status.HTTP_404_NOT_FOUND)
+            return Response({"status": 404, "message": {"id": ["No puede ser menor de edad"]}}, status=status.HTTP_404_NOT_FOUND)
         try:
             instance = get_object_or_404(Users, pk=pk)
             aux_id = instance.id
@@ -58,10 +58,9 @@ class UserApiView(APIView):
 
                 return Response({"status": 200, "message": "success update", "data": users_serializer.data},
                                 status=status.HTTP_200_OK)
-            return Response({"status": 400, "message": "error", "error": users_serializer.errors},
-                            status=status.HTTP_400_BAD_REQUEST)
+            return Response({"status": 400, "message": users_serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
         except:
-            return Response({"status": 400, "message": "No existe el usuario con el id " + pk},
+            return Response({"status": 400, "message": {"id": ["No existe el usuario con el id " + pk]}},
                             status=status.HTTP_400_BAD_REQUEST)
 
 
