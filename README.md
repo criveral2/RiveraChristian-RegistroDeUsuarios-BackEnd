@@ -32,6 +32,11 @@ de consultar a la base de datos.
 - `Docker`
 - `MySql`
 
+## Front End
+```
+https://github.com/criveral2/RiveraChristian-RegistroDeUsuarios-FrontEnd.git
+```
+
 # Ejecutar en desarrollo
 ## 1. Clonar el repositorio
 
